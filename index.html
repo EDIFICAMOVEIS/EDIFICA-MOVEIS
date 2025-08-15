@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edifica - Orçamentos de Montagem de Móveis</title>
+    <meta name="description" content="Sistema de orçamentos para montagem de móveis com identidade cristã">
+    <meta name="keywords" content="móveis, montagem, orçamentos, cristão, edifica">
+    <meta property="og:title" content="Edifica - Orçamentos de Montagem de Móveis">
+    <meta property="og:description" content="Sistema de orçamentos para montagem de móveis com identidade cristã">
+    <meta name="twitter:title" content="Edifica - Orçamentos de Montagem de Móveis">
+    <meta name="twitter:description" content="Sistema de orçamentos para montagem de móveis com identidade cristã">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer base {
+        :root {
+            --primary-color: #87CEEB;
+            --secondary-color: #F5DEB3;
+            --accent-color: #DAA520;
+            --text-dark: #2C3E50;
+            --bg-light: #FAFAFA;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-light);
+        }
+    }
+
+    @layer components {
+        .btn {
+            @apply px-6 py-3 rounded-lg font-medium transition-all duration-200 flex items-center justify-center space-x-2;
+        }
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white hover:opacity-90 shadow-md;
+        }
+        .btn-secondary {
+            @apply bg-[var(--secondary-color)] text-[var(--text-dark)] hover:opacity-90 shadow-md;
+        }
+        .btn-accent {
+            @apply bg-[var(--accent-color)] text-white hover:opacity-90 shadow-md;
+        }
+        .input-field {
+            @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] bg-white;
+        }
+        .card {
+            @apply bg-white rounded-xl shadow-lg p-6 border border-gray-100;
+        }
+        .verse-card {
+            @apply bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] text-white rounded-xl shadow-lg p-8 text-center;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel" src="utils/database.js"></script>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Navigation.js"></script>
+    <script type="text/babel" src="components/Home.js"></script>
+    <script type="text/babel" src="components/AddFurniture.js"></script>
+    <script type="text/babel" src="components/FurnitureList.js"></script>
+    <script type="text/babel" src="components/NewQuote.js"></script>
+    <script type="text/babel" src="components/QuoteHistory.js"></script>
+    <script type="text/babel" src="components/About.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
